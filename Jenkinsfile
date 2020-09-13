@@ -16,7 +16,7 @@ pipeline {
       sh 'echo BUILD_NUMBER = $BUILD_NUMBER'
 
       echo "current user is ${env.USER_NAME}"
-      echo "current user id ${env.USER_ID} (type: ${emv.USER_ID.class})"
+      echo "current user id ${env.USER_ID} (type: ${env.USER_ID.class})"
     }
   }
   }
