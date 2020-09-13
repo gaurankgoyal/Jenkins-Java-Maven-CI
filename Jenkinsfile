@@ -1,14 +1,9 @@
 pipeline {
-  agent {
-    docker {
-      image "maven:3.6.0-jdk-13"
-    }
-  }
+  agent any
   stages {
-    stage("Build") {
+    stage("List env vars") {
       steps {
-        sh "mvn -version"
-        sh "mvn clean install"
+        sh "printenv | sort"
       }
     }
   }
